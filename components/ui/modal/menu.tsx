@@ -2,30 +2,18 @@
 
 import { useState, useEffect, Key } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { dropIn } from "@/lib/animations";
+import { dropIn, reveal } from "@/lib/animations";
 import ReactDOM from "react-dom";
 import Overlay from "./overlay";
-import ContactForm from "../forms/ContactForm";
 
-const Contact = ({ show, onClose }: any) => {
+import { usePathname } from "next/navigation";
+import Image from "next/image";
+import Logo from "../layout/Logo";
+
+const Menu = ({ show, onClose, links }: any) => {
   const [isBrowser, setIsBrowser] = useState(false);
-  const links = [
-    {
-      id: 1,
-      href: "/",
-      text: "home",
-    },
-    {
-      id: 2,
-      href: "/projects",
-      text: "projects",
-    },
-    {
-      id: 3,
-      href: "/contact",
-      text: "contact",
-    },
-  ];
+  const pathname = usePathname();
+
   useEffect(() => {
     setIsBrowser(true);
   }, []);
@@ -33,25 +21,34 @@ const Contact = ({ show, onClose }: any) => {
   const contactContent = show ? (
     <Overlay onClick={onClose}>
       <motion.div
-        variants={dropIn}
+        variants={reveal}
         initial="hidden"
         animate="visible"
         exit="exit"
         onClick={(e) => e.stopPropagation()}
-        className="m-auto w-[500px] px-4 py-8 bg-gray-800 rounded"
+        className="bg-black m-auto rounded-md py-12 w-80 h-100"
       >
-        {/* <ContactForm /> */}
-        <div className="bg-gray-200 absolute h-full w-full bg-primary md:hidden">
-          <div className="flex flex-col p-8 space-y-8">
-            {links.map((link, idx) => (
-              <a key={idx} href={link.href}>
-                {link.text}
-              </a>
-            ))}
-            <a href="/account" className="bg-">
-              Account
-            </a>
-          </div>
+        <div className="flex flex-col justify-center items-center space-y-8 w-full h-full">
+          <Logo />
+
+          {links.map((link: any, i: any) => (
+            <motion.a
+              className="relative capitalize text-xl"
+              key={link.id}
+              href={link.href}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1, translateX: 0 }}
+              transition={{ duration: 0.3, delay: i * 0.1 }}
+            >
+              {link.href === pathname && (
+                <span
+                  // layoutId="underline"
+                  className="absolute left-0 top-full block h-[2px] w-full bg-teal-600 rounded-xl "
+                />
+              )}
+              {link.text}
+            </motion.a>
+          ))}
         </div>
       </motion.div>
     </Overlay>
@@ -70,4 +67,4 @@ const Contact = ({ show, onClose }: any) => {
   }
 };
 
-export default Contact;
+export default Menu;

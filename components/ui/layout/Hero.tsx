@@ -24,7 +24,10 @@ const Hero = () => {
               </p>
             </div>
             <div>
-              <button onClick={toggeContact} className="border-b animate-pulse">
+              <button
+                onClick={toggeContact}
+                className="border-b animate-pulse uppercase"
+              >
                 contact me
               </button>
             </div>
