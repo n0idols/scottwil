@@ -20,17 +20,17 @@ const list = [
   {
     id: 4,
     title: "React",
-    exp: "5 years experience",
+    exp: "4 years experience",
   },
   {
     id: 5,
     title: "Next.js",
-    exp: "5 years experience",
+    exp: "4 years experience",
   },
   {
     id: 6,
     title: "TailwindCSS",
-    exp: "5 years experience",
+    exp: "4 years experience",
   },
 ];
 const Skills = async () => {

@@ -3,7 +3,11 @@ import PageWrapper from "@/components/ui/layout/PageWrapper";
 import PageHero from "@/components/ui/layout/PageHero";
 import ProjectCard from "@/components/ui/ProjectCard";
 import PageContainer from "@/components/ui/layout/PageContainer";
-
+export const metadata = {
+  title: "Scott Wilson - Projects",
+  description:
+    "Experienced web developer Based in California, USA. Passionate about creating functional, beautiful, user friendly websites.",
+};
 const ProjectsPage = async () => {
   const projectsData = await getProjects();
   return (

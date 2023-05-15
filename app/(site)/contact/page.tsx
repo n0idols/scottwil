@@ -2,7 +2,11 @@ import ContactForm from "@/components/ui/forms/ContactForm";
 import PageContainer from "@/components/ui/layout/PageContainer";
 import PageHero from "@/components/ui/layout/PageHero";
 import PageWrapper from "@/components/ui/layout/PageWrapper";
-
+export const metadata = {
+  title: "Scott Wilson - Contact",
+  description:
+    "Experienced web developer Based in California, USA. Passionate about creating functional, beautiful, user friendly websites.",
+};
 const ContactPage = () => {
   return (
     <PageWrapper>
