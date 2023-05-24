@@ -2,7 +2,7 @@ import ProjectCard from "@/components/ui/ProjectCard";
 import Skills from "@/components/ui/Skills";
 import Hero from "@/components/ui/layout/Hero";
 import PageContainer from "@/components/ui/layout/PageContainer";
-import PageHero from "@/components/ui/layout/PageHero";
+
 import PageWrapper from "@/components/ui/layout/PageWrapper";
 import { getProjects } from "@/sanity/sanity-utils";
 
