@@ -26,7 +26,7 @@ const Menu = ({ show, onClose, links }: any) => {
         animate="visible"
         exit="exit"
         onClick={(e) => e.stopPropagation()}
-        className="bg-black m-auto rounded-md py-12 w-80 h-100"
+        className="bg-gray-200 m-auto rounded-md py-12 w-80 h-100"
       >
         <div className="flex flex-col justify-center items-center space-y-8 w-full h-full">
           <Logo />
@@ -43,7 +43,7 @@ const Menu = ({ show, onClose, links }: any) => {
               {link.href === pathname && (
                 <span
                   // layoutId="underline"
-                  className="absolute left-0 top-full block h-[2px] w-full bg-teal-600 rounded-xl "
+                  className="absolute left-0 top-full block h-[2px] w-full bg-gray-800 rounded-xl "
                 />
               )}
               {link.text}

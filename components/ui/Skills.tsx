@@ -36,7 +36,7 @@ const list = [
 const Skills = async () => {
   return (
     <div className="px-4">
-      <section className="max-w-5xl mx-auto my-24 bg-gray-800 rounded-lg px-8">
+      <section className="max-w-5xl mx-auto my-24 bg-gray-100 rounded-lg px-8">
         {/* <hr className="my-10 " /> */}
         <div className="grid md:grid-cols-3 gap-5">
           {list.map((t) => (

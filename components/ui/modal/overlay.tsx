@@ -5,7 +5,7 @@ interface Props {
   children: React.ReactNode;
 }
 const Overlay = ({ onClick, children }: Props) => {
-  const overlay = `h-screen w-screen bg-black overflow-x-hidden overflow-y-auto fixed inset-0 z-50 bg-opacity-70 flex`;
+  const overlay = `h-screen w-screen bg-black overflow-x-hidden overflow-y-auto fixed inset-0 z-50 bg-opacity-80 flex`;
   return (
     <motion.div
       className={overlay}

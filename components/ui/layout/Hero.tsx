@@ -17,7 +17,7 @@ const Hero = () => {
               <h1 className="big-title">Hey, I&apos;m Scott</h1>
             </div>
             <div>
-              <p className="text-lg text-gray-300">
+              <p className="text-lg">
                 {" "}
                 Experienced web developer Based in California, USA. Passionate
                 about creating functional, beautiful, user friendly websites.

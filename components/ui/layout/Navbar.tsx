@@ -56,7 +56,7 @@ const Navbar = () => {
                     {link.href === pathname && (
                       <motion.span
                         layoutId="underline"
-                        className="absolute left-0 top-full block h-[2px] w-full bg-white rounded-xl "
+                        className="absolute left-0 top-full block h-[2px] w-full bg-gray-800 rounded-xl "
                       />
                     )}
                     {link.text}

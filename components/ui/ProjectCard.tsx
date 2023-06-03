@@ -12,9 +12,9 @@ const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <article
       key={project._id}
-      className="w-full flex flex-col items-center justify-center bg-gray-800 rounded-3xl p-8 border shadow-2xl relative"
+      className="w-full flex flex-col items-center justify-center bg-gray-100 rounded-3xl p-8 border shadow-2xl relative"
     >
-      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-white" />
+      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-gray-800" />
       <Link
         href={project.demo}
         target="_blank"

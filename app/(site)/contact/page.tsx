@@ -17,7 +17,7 @@ const ContactPage = () => {
               possible."
       />
       <section className="container">
-        <PageContainer className="max-w-xl mx-auto">
+        <PageContainer className="max-w-xl mx-auto bg-gray-100 p-4 rounded-lg">
           <ContactForm />
         </PageContainer>
       </section>
